@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="uk">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Прізвище Ім'я, група ІП-01, ЛР-2, Варіант 2</title>
+  <meta name="description"
+    content="Лабораторна робота №2. Варіант 2. Таблиці HTML-5 та створення зображення засобами CSS-трансформацій.">
+  <meta name="keywords" content="HTML5, CSS3, таблиці, transform, лабораторна робота">
+  <link rel="stylesheet" href="style.css">
+
+  <!-- CSS для Завдання 1 (за умовою — зберігається в цьому ж файлі) -->
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      margin: 30px;
+    }
+
+    h1 {
+      font-size: 22px;
+    }
+
+    h2 {
+      font-size: 18px;
+      margin-top: 40px;
+    }
+
+    /* ===== Завдання 1: таблиця, Варіант 2 ===== */
+    table.variant-table {
+      border-collapse: collapse;
+      width: 640px;
+      text-align: center;
+    }
+
+    table.variant-table td {
+      border: 1px solid #333;
+      padding: 10px;
+      transition: background-color 0.3s ease, color 0.3s ease;
+    }
+
+    /* 1-й рядок: background-color #nn8f8f, де nn = 02 */
+    table.variant-table tr.row1 td {
+      background-color: #028f8f;
+      color: #ffffff;
+      /* контрастний колір до #028f8f */
+    }
+
+    /* 2-й рядок: background-color #f5f5nn, де nn = 02 */
+    table.variant-table tr.row2 td {
+      background-color: #f5f502;
+      color: #1a1a1a;
+      /* контрастний колір до #f5f502 */
+    }
+
+    /* При наведенні кольори рядків міняються на протилежні */
+    table.variant-table tr.row1:hover td {
+      background-color: #f5f502;
+      color: #1a1a1a;
+    }
+
+    table.variant-table tr.row2:hover td {
+      background-color: #028f8f;
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+
+  <h1>Лабораторна робота №2. Варіант 2</h1>
+  <p>Тема: «Таблиці в HTML-5. Створення зображень засобами трансформацій в CSS-3»</p>
+
+  <h2>Завдання 1. Таблиця (Варіант 2)</h2>
+  <table class="variant-table">
+    <tr class="row1">
+      <td rowspan="3">Шмігель</td>
+      <td>Макар</td>
+      <td rowspan="3">Олексійович</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="row1">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="row1">
+      <td>&nbsp;</td>
+      <td>&nbsp;</td>
+    </tr>
+    <tr class="row2">
+      <td>ІО-44</td>
+      <td colspan="2">ЛР №2</td>
+      <td>Варіант 2</td>
+    </tr>
+  </table>
+
+  <h2>Завдання 2. Зображення за допомогою transform (Варіант 2 — прапор Швейцарії)</h2>
+  <div class="flag">
+    <div class="cross">
+      <span class="bar bar1"></span>
+      <span class="bar bar2"></span>
+    </div>
+  </div>
+
+</body>
+
+</html>

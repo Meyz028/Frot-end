@@ -1,0 +1,36 @@
+/* ===== Завдання 2: зображення прапору Швейцарії ===== */
+/* Варіант 2 -> побудова зображення виключно за допомогою transform,
+   без властивості position. Хрест складається з двох однакових
+   прямокутників, накладених один на одного через CSS Grid
+   (grid-area: 1 / 1), другий з них повернутий на 90° за допомогою
+   transform: rotate(). */
+
+.flag {
+  width: 240px;
+  height: 240px;
+  background-color: #d52b1e;
+  display: grid;
+  place-items: center;
+  border: 1px solid #7a1710;
+  margin-top: 10px;
+}
+
+.cross {
+  display: grid;
+  place-items: center;
+  width: 62%;
+  height: 62%;
+}
+
+.bar {
+  grid-area: 1 / 1;
+  background-color: #ffffff;
+  width: 32%;
+  height: 100%;
+}
+
+/* другий прямокутник повертаємо на 90 градусів transform-ом —
+   так з двох однакових вертикальних смужок отримуємо хрест */
+.bar2 {
+  transform: rotate(90deg);
+}
