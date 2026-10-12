@@ -1,0 +1,85 @@
+/* Лабораторна робота №3, варіант 2 — блочна верстка (float) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+/* Обгортка: ширина у відсотках, по центру сторінки */
+.wrapper {
+    width: 83%;
+    margin: 70px auto;
+}
+
+/* Очищення float, щоб обгортка охоплювала дочірні блоки */
+.wrapper::after {
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.block {
+    float: left;
+    height: 195px;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+/* Перший ряд: два блоки по 50% */
+.img-top  { width: 50%; background: #9090fb; }
+.text-top { width: 50%; background: #239ec9; }
+
+/* Другий ряд: текст на всю ширину */
+.text-middle {
+    width: 100%;
+    clear: both;
+    height: 170px;
+    background: #ade5f5;
+}
+
+/* Третій ряд: зображення на всю ширину */
+.img-bottom {
+    width: 100%;
+    clear: both;
+    height: 165px;
+    background: #239ec9;
+}
+
+.block img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.block p {
+    padding: 0 5%;
+    text-align: center;
+}
+
+/* Вертикальне центрування тексту без flex (для float-версії) */
+.text-top,
+.text-middle {
+    display: table;
+}
+
+.text-top p,
+.text-middle p {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .wrapper { width: 94%; margin: 20px auto; }
+    .img-top, .text-top { width: 100%; }
+    .block { font-size: 1.4rem; }
+}

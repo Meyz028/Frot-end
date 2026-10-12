@@ -1,0 +1,71 @@
+/* Лабораторна робота №3, варіант 2 — блочна верстка (Flexbox) */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+}
+
+/* Flex-контейнер: блоки переносяться на нові рядки */
+.wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    width: 83%;
+    margin: 70px auto;
+}
+
+.block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+    text-align: center;
+}
+
+/* Перший ряд: два блоки по 50% */
+.img-top {
+    flex: 0 0 50%;
+    height: 195px;
+    background: #9090fb;
+}
+
+.text-top {
+    flex: 0 0 50%;
+    height: 195px;
+    background: #239ec9;
+}
+
+/* Другий ряд: текст на всю ширину */
+.text-middle {
+    flex: 0 0 100%;
+    height: 170px;
+    background: #ade5f5;
+}
+
+/* Третій ряд: зображення на всю ширину */
+.img-bottom {
+    flex: 0 0 100%;
+    height: 165px;
+    background: #239ec9;
+}
+
+.block img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Адаптивність */
+@media (max-width: 600px) {
+    .wrapper { width: 94%; margin: 20px auto; }
+    .img-top, .text-top { flex-basis: 100%; }
+    .block { font-size: 1.4rem; }
+}
