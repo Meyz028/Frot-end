@@ -1,10 +1,10 @@
 "use strict";
 
 /* ---------- Завдання 1 ----------
-   n = 2 (варіант) → номер елемента = (n mod 10) + 1 = 3.
+   n = 102 (варіант) → номер елемента = (n mod 10) + 1 = 3.
    3-й елемент  — getElementById
    4-й елемент  — querySelector                                      */
-const n = 2;
+const n = 102;
 const index = (n % 10) + 1;                       // 3
 
 const first = document.getElementById("block3");  // 3-й елемент сторінки
