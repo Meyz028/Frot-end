@@ -1,0 +1,11 @@
+body { font-family: Arial, sans-serif; margin: 0; background: #f4f4f4; color: #222; }
+#page { max-width: 760px; margin: 20px auto; padding: 16px; background: #fff; }
+#page > * { padding: 8px 10px; cursor: pointer; }
+.city-img { width: 300px; height: auto; display: inline-block; margin: 4px; transition: width .2s; }
+#photo-box { cursor: default; }
+.controls { cursor: default !important; margin-top: 8px; }
+.controls button { padding: 6px 14px; margin-right: 6px; cursor: pointer; }
+
+/* Стани для зміни кольорів з JS (клас перемикається) */
+.scheme-a { background-color: #1e88e5; color: #ffffff; }
+.scheme-b { background-color: #ffeb3b; color: #b71c1c; }
